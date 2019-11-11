@@ -14,8 +14,14 @@ const booksFailed = (error) => ({
     payload: error
 });
 
+
+const fetchBooks = (bookStoreService, dispatch) => () => {
+    dispatch(booksRequested());
+    bookStoreService.getBooks()
+        .then((data) => dispatch(booksLoaded(data)))
+        .catch((error) => dispatch(booksFailed(error)));
+};
+
 export {
-    booksLoaded,
-    booksRequested,
-    booksFailed,
+    fetchBooks
 };

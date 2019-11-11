@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import {BookList, ShoppingCartTable} from "../index";
+import { ShoppingCartTable} from "../index";
+import {BookListContainer} from "../../containers";
 
 export default class HomePage extends Component {
     render() {
         return (
             <div>
-                <BookList />
+                <BookListContainer />
                 <ShoppingCartTable />
             </div>
         );
