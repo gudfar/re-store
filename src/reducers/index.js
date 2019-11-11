@@ -1,7 +1,8 @@
 import * as actionTypes from '../constants/actionTypes';
 
 const initialState = {
-    books: []
+    books: [],
+    loading: true
 };
 
 /**
@@ -11,7 +12,10 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.BOOKS_LOADED:
-            return {books: action.payload};
+            return {
+                books: action.payload,
+                loading: false
+            };
         default:
             return state;
     }
