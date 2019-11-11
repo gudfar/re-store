@@ -5,6 +5,17 @@ const booksLoaded = (bookList) => ({
     payload: bookList
 });
 
+const booksRequested = () => ({
+    type: actionTypes.BOOKS_REQUESTED,
+});
+
+const booksFailed = (error) => ({
+    type: actionTypes.BOOKS_FAILED,
+    payload: error
+});
+
 export {
-    booksLoaded
+    booksLoaded,
+    booksRequested,
+    booksFailed,
 };
