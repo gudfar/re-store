@@ -5,7 +5,6 @@ export const BOOKS_FAILED = 'FETCH_BOOKS_FAILURE';
 /**
  * Basket
  */
-export const BASKET_LOADED              = 'FETCH_BASKET_SUCCESS';
 export const ADD_TO_BASKET              = 'ADD_TO_BASKET';
 export const CALCULATE_BASKET_AMOUNT    = 'CALCULATE_BASKET_AMOUNT';
 export const INCREASE_BASKET_ITEM_COUNT = 'INCREASE_BASKET_ITEM_COUNT';

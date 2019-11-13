@@ -3,11 +3,9 @@ import * as actionTypes from '../constants/actionTypes';
 const addToBasket = (item, dispatch) => {
     dispatch({type: actionTypes.ADD_TO_BASKET, payload: item});
     dispatch(calculateBasketAmount());
-    dispatch(basketLoaded());
 };
 
 const calculateBasketAmount = () => ({type: actionTypes.CALCULATE_BASKET_AMOUNT});
-const basketLoaded = () => ({type: actionTypes.BASKET_LOADED});
 
 const increaseBasketItemCount = (id, dispatch) => {
     dispatch({type: actionTypes.INCREASE_BASKET_ITEM_COUNT, payload: { id }});

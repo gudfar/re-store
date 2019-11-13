@@ -13,8 +13,6 @@ const basketReducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.ADD_TO_BASKET:
             return saveToBasket(state, action);
-        case actionTypes.BASKET_LOADED:
-            return state;
         case actionTypes.CALCULATE_BASKET_AMOUNT:
             return calculateBasketAmount(state);
         case actionTypes.INCREASE_BASKET_ITEM_COUNT:
