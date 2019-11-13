@@ -11,7 +11,6 @@ class BookListContainer extends Component {
         this.props.fetchBooks();
     }
 
-
     render() {
         const {books, loading, error} = this.props;
 
@@ -27,7 +26,7 @@ class BookListContainer extends Component {
     }
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({booksReducer: state}) => {
     return {
         books: state.books,
         loading: state.loading,

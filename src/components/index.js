@@ -5,4 +5,3 @@ export {default as App} from './App';
 export {default as BookList} from './BookList';
 export {default as BookListItem} from './BookListItem';
 export {default as ShopHeader} from './ShopHeader';
-export {default as ShoppingCartTable} from './ShoppingCartTable';

@@ -1,38 +1,8 @@
-import * as actionTypes from '../constants/actionTypes';
+import { combineReducers } from 'redux'
+import booksReducer from './booksReducer'
+import basketReducer from './basketReducer'
 
-const initialState = {
-    books: [],
-    loading: true,
-    error: null
-};
-
-/**
- * @param state
- * @param action
- */
-const reducer = (state = initialState, action) => {
-    switch (action.type) {
-        case actionTypes.BOOKS_LOADED:
-            return {
-                books: action.payload,
-                loading: false,
-                error: null
-            };
-        case actionTypes.BOOKS_REQUESTED:
-            return {
-                books: [],
-                loading: true,
-                error: null
-            };
-        case actionTypes.BOOKS_FAILED:
-            return {
-                books: [],
-                loading: false,
-                error: action.payload
-            };
-        default:
-            return state;
-    }
-};
-
-export default reducer;
+export default combineReducers({
+    booksReducer,
+    basketReducer
+})
