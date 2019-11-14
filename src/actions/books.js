@@ -22,6 +22,13 @@ const fetchBooks = (bookStoreService, dispatch) => () => {
         .catch((error) => dispatch(booksFailed(error)));
 };
 
+const fetchBooksOld = (bookstoreService) => () => (dispatch) => {
+    dispatch(booksRequested());
+    bookstoreService.getBooks()
+        .then((data) => dispatch(booksLoaded(data)))
+        .catch((err) => dispatch(booksFailed(err)));
+};
+
 export {
     fetchBooks
 };
